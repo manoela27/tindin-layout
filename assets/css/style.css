@@ -64,12 +64,12 @@ body {
   text-decoration: none;
 }
 .c-menu-tindin .menu-suboptions .box-suboptions.active::before {
-  height: 2 px;
+  height: 2px;
   border-radius: 50px;
   width: 100%;
   background-color: #ffffff;
   left: 0;
-  bottom: -90%;
+  bottom: -70%;
   position: absolute;
   content: "";
 }
