@@ -50,7 +50,6 @@ body {
 .c-menu-tindin .menu-suboptions .box-suboptions {
   position: relative;
   width: 100px;
-  word-wrap: inherit;
   margin: 0px 16px;
 }
 .c-menu-tindin .menu-suboptions .box-suboptions .suboptions {
@@ -65,7 +64,7 @@ body {
   text-decoration: none;
 }
 .c-menu-tindin .menu-suboptions .box-suboptions.active::before {
-  height: 2.5px;
+  height: 2 px;
   border-radius: 50px;
   width: 100%;
   background-color: #ffffff;

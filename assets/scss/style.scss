@@ -63,7 +63,6 @@ body{
         .box-suboptions{
             position: relative;
             width: 100px;
-            word-wrap: inherit;
             margin: 0px 16px;
 
 
@@ -82,7 +81,7 @@ body{
 
             &.active{
                 &::before{
-                    height: 2.5px;
+                    height: 2   px;
                     border-radius: 50px;
                     width: 100%;
                     background-color: #ffffff;
