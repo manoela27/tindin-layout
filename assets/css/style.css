@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: "Inter";
+}
+
+.c-home {
+  background: url("/assets/img/bg.png");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+}
+
+.c-menu-tindin {
+  height: 100%;
+  width: 30%;
+  border-radius: 0px 10px 10px 0px;
+  background-color: rgba(57, 69, 115, 0.9);
+}
+.c-menu-tindin .menu_header {
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.c-menu-tindin .menu_header .menu-logo {
+  height: 38px;
+}
+.c-menu-tindin .menu_header .menu-box-icons {
+  display: flex;
+  align-items: center;
+}
+.c-menu-tindin .menu_header .menu-box-icons .menu-icon {
+  margin: 0px 12px;
+}
+.c-menu-tindin .menu-suboptions {
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid rgba(217, 217, 217, 0.5);
+  border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.c-menu-tindin .menu-suboptions .box-suboptions {
+  position: relative;
+  width: 100px;
+  word-wrap: inherit;
+  margin: 0px 16px;
+}
+.c-menu-tindin .menu-suboptions .box-suboptions .suboptions {
+  color: #ffffff;
+  font-weight: 450;
+  width: 100%;
+  font-family: "Inter";
+  white-space: nowrap;
+  font-size: 14px;
+}
+.c-menu-tindin .menu-suboptions .box-suboptions .suboptions:hover {
+  text-decoration: none;
+}
+.c-menu-tindin .menu-suboptions .box-suboptions.active::before {
+  height: 2.5px;
+  border-radius: 50px;
+  width: 100%;
+  background-color: #ffffff;
+  left: 0;
+  bottom: -90%;
+  position: absolute;
+  content: "";
+}
+.c-menu-tindin .menu-register .sign-accont {
+  padding: 0px 32px;
+}
+.c-menu-tindin .menu-register .sign-accont input {
+  border-radius: 8px;
+  width: 320px;
+  background-color: rgba(90, 107, 171, 0.9);
+  height: 42px;
+  padding: 0px 8px;
+}
+.c-menu-tindin .menu-register .sign-accont input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+.c-menu-tindin .menu-register .sign-accont .password-recover {
+  color: rgb(200, 200, 203);
+}
+.c-menu-tindin .menu-register .sign-accont button {
+  width: 320px;
+  background-color: #ffc225;
+  border-radius: 8px;
+  height: 44px;
+  font-weight: 600;
+  color: #323d67;
+  margin-top: 48px;
+}
+.c-menu-tindin .menu-register .sign-accont .others-sign {
+  margin-top: 40px;
+}
+.c-menu-tindin .menu-register .sign-accont .others-sign span {
+  padding: 0px 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.c-menu-tindin .menu-register .sign-accont .others-sign hr {
+  width: 100px;
+  border-radius: 16px;
+  height: 0.12rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.c-menu-tindin .menu-register .sign-accont .others-sign .social-media {
+  margin-top: 24px;
+}
+.c-menu-tindin .menu-register .sign-accont .others-sign .social-media a {
+  background-color: #5867a6;
+  height: 48px;
+  border-radius: 12px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  margin: 0px 8px;
+}
+.c-menu-tindin .menu-register .sign-accont .others-sign .social-media a:first-child {
+  margin-left: 0px;
+}
+.c-menu-tindin .menu-register .sign-accont .others-sign .social-media a:last-child {
+  margin-right: 0px;
+}
+.c-menu-tindin .menu-register .sign-accont .others-sign .social-media a img {
+  width: 100%;
+}
+.c-menu-tindin .menu-language {
+  border-top: 1px solid rgba(217, 217, 217, 0.3);
+}
+.c-menu-tindin .menu-language a {
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  margin: 0px 8px;
+  filter: grayscale(1);
+}
+.c-menu-tindin .menu-language a.active {
+  filter: none;
+}
+.c-menu-tindin .menu-language a img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
