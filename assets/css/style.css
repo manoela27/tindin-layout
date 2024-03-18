@@ -7,6 +7,11 @@ body {
   font-family: "Inter";
 }
 
+button {
+  border: none;
+  background-color: none;
+}
+
 .c-home {
   background: url("../img/bg.png");
   height: 100vh;
@@ -19,6 +24,7 @@ body {
   width: 30%;
   border-radius: 0px 10px 10px 0px;
   background-color: rgba(57, 69, 115, 0.9);
+  overflow: auto;
 }
 .c-menu-tindin .menu_header {
   padding: 16px 24px;
@@ -49,7 +55,6 @@ body {
 }
 .c-menu-tindin .menu-suboptions .box-suboptions {
   position: relative;
-  width: 100px;
   margin: 0px 16px;
 }
 .c-menu-tindin .menu-suboptions .box-suboptions .suboptions {
@@ -73,49 +78,62 @@ body {
   position: absolute;
   content: "";
 }
-.c-menu-tindin .menu-register-tindin .sign-accont {
+.c-menu-tindin .menu-register {
+  min-height: 75vh;
+}
+.c-menu-tindin .menu-register .sign-accont {
   padding: 0px 32px;
 }
-.c-menu-tindin .menu-register-tindin .sign-accont input {
+.c-menu-tindin .menu-register .sign-accont input {
   border-radius: 8px;
   width: 320px;
   background-color: rgba(90, 107, 171, 0.9);
   height: 42px;
   padding: 0px 8px;
 }
-.c-menu-tindin .menu-register-tindin .sign-accont input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+.c-menu-tindin .menu-register .sign-accont input::placeholder {
+  color: rgba(255, 255, 255, 0.5019607843);
   font-size: 14px;
 }
-.c-menu-tindin .menu-register-tindin .sign-accont .password-recover {
+.c-menu-tindin .menu-register .sign-accont input.error {
+  background-color: #fcd5d5;
+  border: #bf3034 2px solid;
+}
+.c-menu-tindin .menu-register .sign-accont input.error::placeholder {
+  color: #bf3034;
+}
+.c-menu-tindin .menu-register .sign-accont .password-recover {
   color: rgb(200, 200, 203);
 }
-.c-menu-tindin .menu-register-tindin .sign-accont button {
+.c-menu-tindin .menu-register .sign-accont .submit {
   width: 320px;
   background-color: #ffc225;
   border-radius: 8px;
   height: 44px;
   font-weight: 600;
   color: #323d67;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 48px;
 }
-.c-menu-tindin .menu-register-tindin .sign-accont .others-sign {
-  margin-top: 40px;
+.c-menu-tindin .menu-register .sign-accont .others-sign {
+  padding-top: 40px;
 }
-.c-menu-tindin .menu-register-tindin .sign-accont .others-sign span {
+.c-menu-tindin .menu-register .sign-accont .others-sign span {
   padding: 0px 16px;
   color: rgba(255, 255, 255, 0.8);
 }
-.c-menu-tindin .menu-register-tindin .sign-accont .others-sign hr {
+.c-menu-tindin .menu-register .sign-accont .others-sign hr {
   width: 100px;
   border-radius: 16px;
   height: 0.12rem;
   background-color: rgba(255, 255, 255, 0.8);
 }
-.c-menu-tindin .menu-register-tindin .sign-accont .others-sign .social-media {
+.c-menu-tindin .menu-register .sign-accont .others-sign .social-media {
   margin-top: 24px;
 }
-.c-menu-tindin .menu-register-tindin .sign-accont .others-sign .social-media a {
+.c-menu-tindin .menu-register .sign-accont .others-sign .social-media a {
   background-color: #5867a6;
   height: 48px;
   border-radius: 12px;
@@ -126,35 +144,74 @@ body {
   padding: 12px;
   margin: 0px 8px;
 }
-.c-menu-tindin .menu-register-tindin .sign-accont .others-sign .social-media a:first-child {
+.c-menu-tindin .menu-register .sign-accont .others-sign .social-media a:first-child {
   margin-left: 0px;
 }
-.c-menu-tindin .menu-register-tindin .sign-accont .others-sign .social-media a:last-child {
+.c-menu-tindin .menu-register .sign-accont .others-sign .social-media a:last-child {
   margin-right: 0px;
 }
-.c-menu-tindin .menu-register-tindin .sign-accont .others-sign .social-media a img {
+.c-menu-tindin .menu-register .sign-accont .others-sign .social-media a img {
   width: 100%;
 }
 .c-menu-tindin .menu-footer {
   border-top: 1px solid rgba(217, 217, 217, 0.3);
+  min-height: 5vh;
 }
-.c-menu-tindin .menu-footer a {
+.c-menu-tindin .menu-footer .action-menu {
+  color: white;
+}
+.c-menu-tindin .menu-footer .language {
   height: 32px;
   width: 32px;
   border-radius: 100%;
   margin: 0px 8px;
   filter: grayscale(1);
 }
-.c-menu-tindin .menu-footer a.active {
+.c-menu-tindin .menu-footer .language.active {
   filter: none;
 }
-.c-menu-tindin .menu-footer a img {
+.c-menu-tindin .menu-footer .language img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.c-menu-tindin .menu-footer .action-menu {
+.c-menu-tindin .menu-forms {
+  padding: 32px;
+  min-height: 87vh;
+}
+.c-menu-tindin .menu-forms .img-tindin {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 30vh;
+}
+.c-menu-tindin .menu-forms .img-tindin img {
+  height: 100%;
+  object-fit: cover;
+}
+.c-menu-tindin .menu-forms .question-form {
   color: white;
+  font-size: 20px;
+  padding: 32px 0px;
+  padding-bottom: 16px;
+}
+.c-menu-tindin .menu-forms .answer-tindin {
+  margin-top: 16px;
+}
+.c-menu-tindin .menu-forms .answer-tindin:first-child {
+  margin-top: 0px;
+}
+.c-menu-tindin .menu-forms .answer-tindin input {
+  width: 24px;
+  height: 24px;
+}
+.c-menu-tindin .menu-forms .answer-tindin input:checked {
+  background-color: white;
+}
+.c-menu-tindin .menu-forms .answer-tindin p {
+  color: white;
+  padding-left: 8px;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=style.css.map */

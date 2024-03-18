@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -14,11 +14,11 @@
         <section class="c-home"> 
             <div class="c-menu-tindin">
                 <div class="menu_header">
-                    <img class="menu-logo" src="assets/img/logo.svg">
+                    <img class="menu-logo" src="../../assets/img/logo.svg">
                     <div class="menu-box-icons">
-                        <img class="menu-icon" src="assets/img/icons/minimize.svg"> 
-                        <img class="menu-icon" src="assets/img/icons/maximize.svg">
-                        <img class="menu-icon" src="assets/img/icons/close.svg">
+                        <img class="menu-icon" src="../../assets/img/icons/minimize.svg"> 
+                        <img class="menu-icon" src="../../assets/img/icons/maximize.svg">
+                        <img class="menu-icon" src="../../assets/img/icons/close.svg">
                     </div>
                 </div>
                 <div class="menu-suboptions">
@@ -41,7 +41,7 @@
 
                     
                 </div>
-                <div class="menu-register-tindin flex flex-col items-center pt-8 pb-5 justify-center" >
+                <div class="menu-register flex flex-col items-center pt-8 pb-5 justify-center" >
                     <h1 class="font-normal text-3xl pb-4 text-white">
                         Conecte-se já!
                     </h1>
@@ -49,16 +49,16 @@
                     <div class="sign-accont w-full flex flex-col items-center justify-center mt-6">
                         <div class="box-input flex flex-col items-start">
                             <label class="pb-2 text-white text-sm	">E-mail ou Celular</label>
-                            <input type="text" placeholder="Digite seu e-mail ou celular cadastrado"/>
+                            <input class="error" type="text" placeholder="Digite seu e-mail ou celular cadastrado"/>
                         </div>
                         <div class="box-input flex flex-col items-start mt-8">
                             <label class="pb-2 text-white text-sm	">Senha</label>
                             <input type="password" placeholder="********"/>
                             <a class="pt-2 text-xs underline password-recover" href="">Esqueci a senha</a>
                         </div>
-                        <button type="submit">
+                        <a class="submit" href="../forms/form.html">
                             Entrar
-                        </button>
+                        </a>
                         <div class="others-sign text-normal flex flex-col justify-center items-center">
                             <div class=" flex items-center">
                                 <hr>
@@ -67,16 +67,16 @@
                             </div>
                             <div class="social-media flex ">
                                 <a href>
-                                    <img src="assets/img/icons/apple.svg">
+                                    <img src="../../assets/img/icons/apple.svg">
                                 </a>
                                 <a href>
-                                    <img src="assets/img/icons/apple.svg">
+                                    <img src="../../assets/img/icons/apple.svg">
                                 </a>
                                 <a href>
-                                    <img src="assets/img/icons/apple.svg">
+                                    <img src="../../assets/img/icons/apple.svg">
                                 </a>
                                 <a href>
-                                    <img src="assets/img/icons/apple.svg">
+                                    <img src="../../assets/img/icons/apple.svg">
                                 </a>
                             </div>
                             
@@ -84,27 +84,23 @@
                     </div>
                 </div>
 
-                <div class="menu-footer flex pt-2 pb-2 items-center justify-between">
-                    <div class="action-menu">
-                        <span>voltar</span>
-                    </div>
-                    <div class="box-language">
+                <div class="menu-footer flex pt-2 pb-2 items-center px-8 justify-between">
+                    <a class="action-menu">Voltar</a>
+                    <div class="box-language flex">
                         <a class="language">
-                            <img src="assets/img/icons/icon-idioma.png">
+                            <img src="../../assets/img/icons/icon-idioma.png">
                         </a>
                         <a class="language active">
-                            <img src="assets/img/icons/icon-idioma.png">
+                            <img src="../../assets/img/icons/icon-idioma.png">
                         </a>
                         <a class="language">
-                            <img src="assets/img/icons/icon-idioma.png">
+                            <img src="../../assets/img/icons/icon-idioma.png">
                         </a>
                     </div>
-                    <div class="action-menu">
-                        <span>Avançar</span>
-                    </div>
-                    
+                    <a class="action-menu" href="../forms/form.html">Avançar</a>
                 </div>
             </div>
         </section>
+        
     </body>
 </html>

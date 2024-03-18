@@ -5,6 +5,8 @@ $color-button:#ffc225;
 $text-third:#323d67;
 $text-secondary:#ffffffcc;
 $background-primary:#5867a6;
+$error-bg:#fcd5d5;
+$error-color:#bf3034;
 
 body{
     margin: 0;
@@ -13,6 +15,10 @@ body{
 *{
     font-family: "Inter"  ;
 
+}
+button{
+    border: none;
+    background-color: none;
 }
 
 .c-home{
@@ -27,6 +33,7 @@ body{
     width: 30%;
     border-radius: 0px 10px 10px 0px;
     background-color: rgba(57, 69, 115, 0.9);
+    overflow: auto;
 
     .menu_header{
         padding: 16px 24px;
@@ -62,7 +69,6 @@ body{
 
         .box-suboptions{
             position: relative;
-            width: 100px;
             margin: 0px 16px;
 
 
@@ -97,7 +103,8 @@ body{
 
     }
 
-    .menu-register-tindin{
+    .menu-register{
+        min-height: 75vh;
         .sign-accont{
             padding: 0px 32px;
 
@@ -108,26 +115,39 @@ body{
                 height: 42px;
                 padding: 0px 8px;
                 
+
                 &::placeholder{
-                    color: rgba(255, 255, 255, 0.5);
+                    color: #ffffff80;
                     font-size: 14px;
+                }
+                &.error{
+                    background-color: $error-bg;
+                    border: $error-color 2px solid;
+
+                    &::placeholder{
+                        color: $error-color;
+
+                    }
                 }
             }
             .password-recover{
                 color: rgba(200, 200, 203, 1)
             }
-            button{
+            .submit{
                 width: 320px;
                 background-color: $color-button;
                 border-radius: 8px;
                 height: 44px;
                 font-weight: 600;
                 color: $text-third;
+                display: flex;
+                justify-content: center;
+                align-items:center;
                 margin-top: 48px;
             }
 
             .others-sign{
-                margin-top:40px;
+                padding-top:40px;
 
                 span{
                     padding: 0px 16px;
@@ -171,8 +191,12 @@ body{
 
     .menu-footer{
         border-top:1px solid rgba(217, 217, 217,0.3);
-        
-         a{
+        min-height: 5vh;
+
+        .action-menu{
+            color: white;
+         }
+         .language{
             height: 32px;
             width: 32px;
             border-radius: 100%;
@@ -190,10 +214,51 @@ body{
             }
             
          }
-         .action-menu{
-            color:white;
-         }
          
     }
+    .menu-forms{
+        padding: 32px;
+        min-height: 87vh;
+        
+        .img-tindin{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 30vh;
 
+            img{
+                height: 100%;
+                object-fit: cover;
+
+            }
+        }
+        .question-form{
+            color: white;
+            font-size: 20px;
+            padding:32px 0px;
+            padding-bottom: 16px;
+        }
+        .answer-tindin{
+            margin-top:16px;
+
+            &:first-child{
+                margin-top: 0px;
+            }
+
+            input{
+                width: 24px;
+                height: 24px;
+
+                    &:checked{
+                        background-color: white;
+                    }
+            }
+            p{
+                color: white;
+                padding-left: 8px;
+                font-size: 18px;
+            }
+
+        }
+    }
 }
