@@ -25,6 +25,9 @@ button {
   border-radius: 0px 10px 10px 0px;
   background-color: rgba(57, 69, 115, 0.9);
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .c-menu-tindin .menu_header {
   padding: 16px 24px;
@@ -77,9 +80,6 @@ button {
   bottom: -70%;
   position: absolute;
   content: "";
-}
-.c-menu-tindin .menu-register {
-  min-height: 75vh;
 }
 .c-menu-tindin .menu-register .sign-accont {
   padding: 0px 32px;

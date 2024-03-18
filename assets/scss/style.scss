@@ -34,6 +34,9 @@ button{
     border-radius: 0px 10px 10px 0px;
     background-color: rgba(57, 69, 115, 0.9);
     overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
 
     .menu_header{
         padding: 16px 24px;
@@ -104,7 +107,7 @@ button{
     }
 
     .menu-register{
-        min-height: 75vh;
+
         .sign-accont{
             padding: 0px 32px;
 
