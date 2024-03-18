@@ -97,7 +97,7 @@ body{
 
     }
 
-    .menu-register{
+    .menu-register-tindin{
         .sign-accont{
             padding: 0px 32px;
 
@@ -169,7 +169,7 @@ body{
         }
     }
 
-    .menu-language{
+    .menu-footer{
         border-top:1px solid rgba(217, 217, 217,0.3);
         
          a{
@@ -190,6 +190,10 @@ body{
             }
             
          }
+         .action-menu{
+            color:white;
+         }
+         
     }
 
 }
