@@ -231,17 +231,16 @@ button {
 }
 .c-menu-tindin .menu-forms .sign-form {
   padding-top: 16px;
-  align-items: center;
+  align-items: start;
 }
 .c-menu-tindin .menu-forms .question-form {
   color: white;
   font-size: 20px;
   padding-bottom: 16px;
-  text-align: center;
+  text-align: start;
 }
 .c-menu-tindin .menu-forms .answer-tindin {
   margin-top: 16px;
-  text-align: center;
 }
 .c-menu-tindin .menu-forms .answer-tindin:first-child {
   margin-top: 0px;
@@ -264,6 +263,9 @@ button {
   height: 15px;
   background-color: rgba(57, 69, 115, 0.9019607843);
   border-radius: 50%;
+}
+.c-menu-tindin .menu-forms .answer-tindin input[type=radio]:hover::before {
+  background-color: #ffc225;
 }
 .c-menu-tindin .menu-forms .answer-tindin input[type=radio]:checked::before {
   background-color: white;

@@ -304,17 +304,17 @@ button{
         }
         .sign-form{
             padding-top: 16px;
-            align-items: center;
+            align-items: start;
         }
         .question-form{
             color: white;
             font-size: 20px;
             padding-bottom: 16px;
-            text-align: center;
+            text-align: start;
         }
         .answer-tindin{
             margin-top:16px;
-            text-align: center;
+            
 
             &:first-child{
                 margin-top: 0px;
@@ -338,7 +338,15 @@ button{
                     height: 15px;
                     background-color: #394573e6;
                     border-radius: 50%;
+
+                   
                 }
+                &:hover{
+                    &::before {
+                        background-color: $color-hover;
+                    } 
+                }
+
                 &:checked::before {
                     background-color: white;
                     visibility: visible;
