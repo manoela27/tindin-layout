@@ -7,6 +7,11 @@ $text-secondary:#ffffffcc;
 $background-primary:#5867a6;
 $error-bg:#fcd5d5;
 $error-color:#bf3034;
+$color-hover:$color-button;
+$color-hover-button:$text-third;
+$color-text-hover:$color-button;
+
+
 
 body{
     margin: 0;
@@ -37,6 +42,28 @@ button{
     display: flex;
     flex-direction: column;
     justify-content:space-between;
+    transition: ease 1000ms;
+
+    &.maximized{
+        width: 100%;
+
+        .menu-suboptions{
+            justify-content: center;
+
+            .suboptions{
+                margin: 0px 32px;
+            }
+        }
+
+        .menu-footer{
+            .action-menu{
+                margin: 0px 32px;
+            }
+            .box-language{
+                margin: 0px 32px;
+            }
+        }
+    }    
 
     .menu_header{
         padding: 16px 24px;
@@ -55,8 +82,23 @@ button{
             
             .menu-icon{
                 margin: 0px 12px;
+                fill: white;
+                stroke: white;
+
+                
+                
+                &:hover{
+                    fill: $color-hover;
+                    stroke: $color-hover;
+                    rect{
+                        stroke: $color-hover;   
+                    }
+                }
+                
             }
+            
         } 
+        
     }
 
     .menu-suboptions{
@@ -67,41 +109,46 @@ button{
         width: 100%;
         border-top: 1px solid rgba(217, 217, 217, 0.5);
         border-bottom: 1px solid rgba(217, 217, 217, 0.5);
-        overflow-x: auto;
-        overflow-y:hidden ;
-
-        .box-suboptions{
-            position: relative;
-            margin: 0px 16px;
-
+/*         overflow-x: auto;
+        overflow-y:hidden ; */
 
             .suboptions{
                 color: #ffffff;
                 font-weight: 450;
-                width: 100%;
                 font-family:"Inter";
                 white-space: nowrap;
                 font-size: 14px;
-                
+                position: relative;
+                margin: 0px 16px;
+
+                &.active{
+                    &::before{
+                        height: 2px;
+                        border-radius: 50px;
+                        width: 100%;
+                        background-color: #ffffff;
+                        left: 0;
+                        bottom:-65%;
+                        position: absolute;
+                        content: '';
+                    }
+                }    
+
                 &:hover{
                     text-decoration: none;
-                }                
+                    color: $color-hover;
+
+                    &.active{
+                        &::before{
+                            background-color:$color-button;
+                        }
+                    }    
+                }          
+          
             }
 
-            &.active{
-                &::before{
-                    height: 2px;
-                    border-radius: 50px;
-                    width: 100%;
-                    background-color: #ffffff;
-                    left: 0;
-                    bottom:-70%;
-                    position: absolute;
-                    content: '';
-                }
-            }       
+             
 
-        }
 
 
     }
@@ -147,6 +194,11 @@ button{
                 justify-content: center;
                 align-items:center;
                 margin-top: 48px;
+
+                &:hover{
+                    background-color:$color-hover-button ;
+                    color: $color-text-hover;
+                }
             }
 
             .others-sign{
@@ -180,13 +232,20 @@ button{
                         &:first-child{
                             margin-left: 0px;
                         }
+
                         &:last-child{
                             margin-right: 0px;
                         }
+
                         img{
                             width: 100%;
                         }
+
+                        &:hover{
+                            background-color: $color-hover;
+                        }
                     }
+                    
                 }
             }
         }
@@ -194,19 +253,28 @@ button{
 
     .menu-footer{
         border-top:1px solid rgba(217, 217, 217,0.3);
-        min-height: 5vh;
+        padding-top: 24px;
+        padding-bottom: 24px;
 
         .action-menu{
             color: white;
+
+            &:hover{
+                color: $color-hover;
+            }
          }
          .language{
-            height: 32px;
-            width: 32px;
+            height: 28px;
+            width: 28px;
             border-radius: 100%;
             margin: 0px 8px;
             filter: grayscale(1);
+            cursor: pointer;
 
             &.active{
+                filter: none;
+            }
+            &:hover{
                 filter: none;
             }
 
@@ -221,7 +289,6 @@ button{
     }
     .menu-forms{
         padding: 32px;
-        min-height: 83vh;
         
         .img-tindin{
             display: flex;
@@ -235,27 +302,52 @@ button{
 
             }
         }
+        .sign-form{
+            padding-top: 16px;
+            align-items: center;
+        }
         .question-form{
             color: white;
             font-size: 20px;
-            padding:32px 0px;
             padding-bottom: 16px;
+            text-align: center;
         }
         .answer-tindin{
             margin-top:16px;
+            text-align: center;
 
             &:first-child{
                 margin-top: 0px;
             }
 
-            input{
-                width: 24px;
-                height: 24px;
+            input[type="radio"] {
+                border: 2px solid white;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                outline: none;
+                cursor: pointer;
 
-                    &:checked{
-                        background-color: white;
-                    }
-            }
+                &::before {
+                    content: "";
+                    display: block;
+                    width:15px;
+                    height: 15px;
+                    background-color: #394573e6;
+                    border-radius: 50%;
+                }
+                &:checked::before {
+                    background-color: white;
+                    visibility: visible;
+                    width:15px;
+                    height: 15px;
+                    border:#323d67 3px solid ;
+                }
+              }             
+              
             p{
                 color: white;
                 padding-left: 8px;
@@ -264,4 +356,6 @@ button{
 
         }
     }
+
+
 }

@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -14,19 +14,34 @@
         <section class="c-home"> 
             <div class="c-menu-tindin">
                 <div class="menu_header">
-                    <img class="menu-logo" src="../../assets/img/logo.svg">
+                    <img class="menu-logo" src="assets/img/logo.svg">
                     <div class="menu-box-icons">
-                        <img class="menu-icon" src="../../assets/img/icons/minimize.svg"> 
-                        <img class="menu-icon" src="../../assets/img/icons/maximize.svg">
-                        <img class="menu-icon" src="../../assets/img/icons/close.svg">
+                        <!-- <button id="minimize">
+                            <svg class="menu-icon" width="18" height="18" viewBox="0 0 18 18"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="assets/img/icons/minimize.svg#minimize" />
+                            </svg>
+                        </button> -->
+                        <button id="maximize">
+                            <svg class="menu-icon" width="18" height="18" viewBox="0 0 18 18"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="assets/img/icons/maximize.svg#maximize" />
+                            </svg>
+                        </button>
+<!--                         <button>
+                            <svg class="menu-icon" width="18" height="18" viewBox="0 0 18 18"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="assets/img/icons/close.svg#close" />
+                            </svg> 
+                        </button> -->
                     </div>
                 </div>
                 <div class="menu-forms flex flex-col items-center pt-8 pb-5 justify-center" >
                     <div class="img-tindin">
-                        <img src="../../assets/img/tindin-pig.png" alt="tindin animado"/>
+                        <img src="assets/img/tindin-pig.png" alt="tindin animado"/>
                     </div>
 
-                    <div class="sign-form w-full flex flex-col justify-center">
+                    <div class="sign-form flex flex-col justify-center">
                         <p class="question-form"> Onde você pretende usar nosso metaverso?</p>
                         <div class="answer-tindin flex">
                             <input type="radio" name="option"/>
@@ -47,19 +62,19 @@
                     <a class="action-menu" href="form.html">Voltar</a>
                     <div class="box-language flex">
                         <a class="language">
-                            <img src="../../assets/img/icons/icon-idioma.png">
+                            <img src="assets/img/icons/icon-idioma.png">
                         </a>
                         <a class="language active">
-                            <img src="../../assets/img/icons/icon-idioma.png">
+                            <img src="assets/img/icons/icon-idioma.png">
                         </a>
                         <a class="language">
-                            <img src="../../assets/img/icons/icon-idioma.png">
+                            <img src="assets/img/icons/icon-idioma.png">
                         </a>
                     </div>
                     <a class="action-menu">Avançar</a>
                 </div>
             </div>
         </section>
-        
+        <script src="assets/script.js"></script>
     </body>
 </html>
