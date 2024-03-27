@@ -8,9 +8,14 @@ $background-primary:#5867a6;
 $error-bg:#fcd5d5;
 $error-color:#bf3034;
 $color-hover:$color-button;
-$color-hover-button:$text-third;
-$color-text-hover:$color-button;
+$color-hover-button:#FFDC25;
 
+@mixin phone-horizontal{
+    @media (max-width: 767px) { @content; }
+}
+@mixin phone-vertical{
+    @media (max-width: 415px) { @content; }
+}
 
 
 body{
@@ -35,7 +40,7 @@ button{
 
 .c-menu-tindin{
     height: 100%;
-    width: 30%;
+    width: 33%;
     border-radius: 0px 10px 10px 0px;
     background-color: rgba(57, 69, 115, 0.9);
     overflow: auto;
@@ -43,6 +48,12 @@ button{
     flex-direction: column;
     justify-content:space-between;
     transition: ease 1000ms;
+
+    @include phone-vertical{
+        width: 100%;
+        border-radius: 0px;
+    }
+
 
     &.maximized{
         width: 100%;
@@ -71,6 +82,9 @@ button{
         justify-content: space-between;
         align-items: center;
        
+        @include phone-vertical{
+            justify-content: center;
+        }
 
         .menu-logo{
             height: 38px;
@@ -85,7 +99,9 @@ button{
                 fill: white;
                 stroke: white;
 
-                
+                @include phone-vertical{
+                    display: none;
+                }
                 
                 &:hover{
                     fill: $color-hover;
@@ -109,10 +125,9 @@ button{
         width: 100%;
         border-top: 1px solid rgba(217, 217, 217, 0.5);
         border-bottom: 1px solid rgba(217, 217, 217, 0.5);
-/*         overflow-x: auto;
-        overflow-y:hidden ; */
 
-            .suboptions{
+
+        .suboptions{
                 color: #ffffff;
                 font-weight: 450;
                 font-family:"Inter";
@@ -145,11 +160,7 @@ button{
                     }    
                 }          
           
-            }
-
-             
-
-
+        }
 
     }
 
@@ -160,7 +171,7 @@ button{
 
             input{
                 border-radius: 8px;
-                width: 320px;
+                max-width: 320px;
                 background-color: rgba(90, 107, 171, 0.9);
                 height: 42px;
                 padding: 0px 8px;
@@ -197,7 +208,6 @@ button{
 
                 &:hover{
                     background-color:$color-hover-button ;
-                    color: $color-text-hover;
                 }
             }
 

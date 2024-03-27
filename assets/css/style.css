@@ -21,7 +21,7 @@ button {
 
 .c-menu-tindin {
   height: 100%;
-  width: 30%;
+  width: 33%;
   border-radius: 0px 10px 10px 0px;
   background-color: rgba(57, 69, 115, 0.9);
   overflow: auto;
@@ -29,6 +29,12 @@ button {
   flex-direction: column;
   justify-content: space-between;
   transition: ease 1000ms;
+}
+@media (max-width: 415px) {
+  .c-menu-tindin {
+    width: 100%;
+    border-radius: 0px;
+  }
 }
 .c-menu-tindin.maximized {
   width: 100%;
@@ -51,6 +57,11 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 415px) {
+  .c-menu-tindin .menu_header {
+    justify-content: center;
+  }
+}
 .c-menu-tindin .menu_header .menu-logo {
   height: 38px;
 }
@@ -62,6 +73,11 @@ button {
   margin: 0px 12px;
   fill: white;
   stroke: white;
+}
+@media (max-width: 415px) {
+  .c-menu-tindin .menu_header .menu-box-icons .menu-icon {
+    display: none;
+  }
 }
 .c-menu-tindin .menu_header .menu-box-icons .menu-icon:hover {
   fill: #ffc225;
@@ -78,8 +94,6 @@ button {
   width: 100%;
   border-top: 1px solid rgba(217, 217, 217, 0.5);
   border-bottom: 1px solid rgba(217, 217, 217, 0.5);
-  /*         overflow-x: auto;
-          overflow-y:hidden ; */
 }
 .c-menu-tindin .menu-suboptions .suboptions {
   color: #ffffff;
@@ -112,7 +126,7 @@ button {
 }
 .c-menu-tindin .menu-register .sign-accont input {
   border-radius: 8px;
-  width: 320px;
+  max-width: 320px;
   background-color: rgba(90, 107, 171, 0.9);
   height: 42px;
   padding: 0px 8px;
@@ -144,8 +158,7 @@ button {
   margin-top: 48px;
 }
 .c-menu-tindin .menu-register .sign-accont .submit:hover {
-  background-color: #323d67;
-  color: #ffc225;
+  background-color: #FFDC25;
 }
 .c-menu-tindin .menu-register .sign-accont .others-sign {
   padding-top: 40px;
