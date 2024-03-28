@@ -1,3 +1,14 @@
+window.addEventListener('scroll', function() {
+    var menuRegister = document.querySelector('.menu-register');
+    var menuFooter = document.querySelector('.menu-footer');
+
+    if (menuRegister.scrollHeight > menuRegister.clientHeight) {
+        menuFooter.classList.add('show-before');
+    } else {
+        menuFooter.classList.remove('show-before');
+    }
+});
+
 document.getElementById("maximize").addEventListener("click", function() {
     var menuTindin = document.querySelector(".c-menu-tindin");
     var menuFooter = document.querySelector(".menu-footer");
@@ -21,3 +32,5 @@ document.getElementById("maximize").addEventListener("click", function() {
         maximizeIcon.setAttribute("xlink:href", "assets/img/icons/maximize.svg#maximize");
     }
 });
+
+

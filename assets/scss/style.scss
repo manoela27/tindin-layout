@@ -11,7 +11,7 @@ $color-hover:$color-button;
 $color-hover-button:#FFDC25;
 
 @mixin phone-horizontal{
-    @media (max-width: 767px) { @content; }
+    @media (max-width: 1023px) { @content; }
 }
 @mixin phone-vertical{
     @media (max-width: 415px) { @content; }
@@ -43,20 +43,27 @@ button{
     width: 33%;
     border-radius: 0px 10px 10px 0px;
     background-color: rgba(57, 69, 115, 0.9);
-    overflow: auto;
+    overflow: hidden;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content:space-between;
-    transition: ease 1000ms;
+    transition: ease 800ms;
+
+
+    @include phone-horizontal{
+        border-radius: 0px;
+        
+    }
 
     @include phone-vertical{
         width: 100%;
-        border-radius: 0px;
     }
 
 
     &.maximized{
         width: 100%;
+        padding: 0px;
 
         .menu-suboptions{
             justify-content: center;
@@ -67,6 +74,13 @@ button{
         }
 
         .menu-footer{
+            transition: ease 800ms;
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            background-color: transparent;
+            
+
             .action-menu{
                 margin: 0px 32px;
             }
@@ -93,11 +107,17 @@ button{
         .menu-box-icons{
             display: flex;
             align-items: center;
+            line-height: 0px;
             
             .menu-icon{
                 margin: 0px 12px;
                 fill: white;
                 stroke: white;
+                
+                @include phone-horizontal{
+                    position:relative;
+                    top: 5px;
+                }
 
                 @include phone-vertical{
                     display: none;
@@ -125,16 +145,32 @@ button{
         width: 100%;
         border-top: 1px solid rgba(217, 217, 217, 0.5);
         border-bottom: 1px solid rgba(217, 217, 217, 0.5);
-
+        
+        @include phone-horizontal{
+            padding:16px 8px;
+        }
 
         .suboptions{
-                color: #ffffff;
-                font-weight: 450;
-                font-family:"Inter";
-                white-space: nowrap;
-                font-size: 14px;
-                position: relative;
-                margin: 0px 16px;
+            color: #ffffff;
+            font-weight: 450;
+            font-family:"Inter";
+            white-space: nowrap;
+            font-size: 14px;
+            position: relative;
+            margin: 0px 16px;
+
+            @include phone-horizontal{
+                margin: 0px 8px;
+                font-size: 13px;
+
+                &:first-child{
+                    margin-left: 0px;
+                }
+                &:last-child{
+                    margin-right: 0px;
+                }
+            }
+
 
                 &.active{
                     &::before{
@@ -165,17 +201,39 @@ button{
     }
 
     .menu-register{
+        overflow: auto;
 
+        .title-register{
+            @include phone-horizontal{
+                font-size: 18px;
+            }
+        }
         .sign-accont{
             padding: 0px 32px;
+            max-width: 80%;
 
+            @include phone-horizontal{
+                max-width: 100%;
+                padding: 0px 16px;
+            }
+
+            .box-input{
+                width: 100%;
+                
+                @include phone-horizontal{
+                    width: 100%;
+                }
+            }
             input{
                 border-radius: 8px;
-                max-width: 320px;
+                width: 320px;
                 background-color: rgba(90, 107, 171, 0.9);
                 height: 42px;
                 padding: 0px 8px;
                 
+                @include phone-horizontal{
+                    width: 100%;
+                }
 
                 &::placeholder{
                     color: #ffffff80;
@@ -206,6 +264,10 @@ button{
                 align-items:center;
                 margin-top: 48px;
 
+                @include phone-horizontal{
+                    width: 100%;
+                }
+
                 &:hover{
                     background-color:$color-hover-button ;
                 }
@@ -223,6 +285,11 @@ button{
                     border-radius: 16px;
                     height: 0.12rem;
                     background-color: $text-secondary;
+
+                    @include phone-horizontal{
+                        width: 80px;
+                        border-radius: 0px;
+                    }
                 }
 
                 .social-media{
@@ -238,6 +305,12 @@ button{
                         justify-content: center;
                         padding: 12px;
                         margin: 0px 8px;
+
+                        @include phone-horizontal{
+                            width: 40px;
+                            height: 40px;
+                            padding: 8px;
+                        }
 
                         &:first-child{
                             margin-left: 0px;
@@ -259,15 +332,48 @@ button{
                 }
             }
         }
+
+        
     }
 
     .menu-footer{
         border-top:1px solid rgba(217, 217, 217,0.3);
-        padding-top: 24px;
-        padding-bottom: 24px;
+        padding: 24px 32px;
+        width: 100%;
+        position: relative;
+        background-color: rgba(57, 69, 115, 1);
+
+        @include phone-horizontal{
+            padding: 12px 16px;
+
+            &::before{
+                position: absolute;
+                content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7" fill="none"><path d="M4.62582 5.96469L4.62582 5.96469C4.7218 6.06821 4.85552 6.13091 5 6.13091C5.14448 6.13091 5.2782 6.06821 5.37418 5.96469L5.37418 5.96469L9.0704 1.97792C9.07071 1.9776 9.07102 1.97727 9.07133 1.97694C9.12001 1.92529 9.15792 1.86472 9.18389 1.79928C9.21002 1.73344 9.22384 1.66324 9.22506 1.5926C9.22627 1.52195 9.21486 1.45134 9.19109 1.38465C9.16731 1.31794 9.13135 1.25573 9.08427 1.20209L8.93277 1.33507L9.08427 1.20209C9.03715 1.14841 8.97963 1.10419 8.9143 1.07326C8.84889 1.04229 8.77759 1.02557 8.70473 1.0249C8.63188 1.02423 8.56027 1.03963 8.49428 1.06945C8.42879 1.09904 8.37081 1.14193 8.32296 1.1944L5 4.77891L1.67703 1.19439C1.62918 1.14192 1.5712 1.09904 1.50572 1.06945C1.43973 1.03963 1.36812 1.02423 1.29526 1.0249C1.22241 1.02557 1.15111 1.04229 1.0857 1.07326C1.02037 1.10419 0.962847 1.14841 0.91573 1.20209L1.08494 1.35061L0.915729 1.20209C0.868653 1.25573 0.83269 1.31794 0.808911 1.38465C0.785136 1.45134 0.77373 1.52195 0.774943 1.5926C0.776156 1.66324 0.789982 1.73344 0.816109 1.79928L1.02538 1.71624L0.81611 1.79928C0.842079 1.86472 0.879984 1.92528 0.928668 1.97694L4.62582 5.96469Z" fill="white" stroke="white" stroke-width="0.450289"/></svg>');
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                background: linear-gradient(1.14deg, #061656 -28.91%, rgba(0, 0, 0, 0) 87%);
+                height: 35px;
+                width: 100%;
+                top: -35px;
+                left: 0px;
+            }
+            
+        }
+
+        @include phone-vertical{
+            &::before{
+                display: none;
+            }
+        }
 
         .action-menu{
             color: white;
+
+            @include phone-horizontal{
+                font-size: 14px;
+            }
 
             &:hover{
                 color: $color-hover;
@@ -280,6 +386,11 @@ button{
             margin: 0px 8px;
             filter: grayscale(1);
             cursor: pointer;
+
+            @include phone-horizontal{
+                height: 24px;
+                width: 24px;
+            }
 
             &.active{
                 filter: none;
