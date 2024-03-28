@@ -314,6 +314,7 @@ button {
 }
 .c-menu-tindin .menu-footer .action-menu {
   color: white;
+  font-size: 16px;
 }
 @media (max-width: 1023px) {
   .c-menu-tindin .menu-footer .action-menu {
